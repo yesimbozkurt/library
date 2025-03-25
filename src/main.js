@@ -29,6 +29,7 @@ function addBook() {
   bookList.appendChild(li);
 
   deleteBtn.addEventListener("click", e => {
+    books = books.filter(b => b.name !== book.name);
     li.remove();
   });
 
@@ -58,6 +59,7 @@ function loadBooks() {
       bookList.appendChild(li);
 
       deleteBtn.addEventListener("click", e => {
+        books = books.filter(b => b.name !== book.name);
         li.remove();
       });
 
